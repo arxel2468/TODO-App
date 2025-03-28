@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimpleTodo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <img src="assets/logo.png" width="40" height="40">
+            <h1>SimpleTodo</h1>
+            <div id="auth-container">
+                <button id="login-btn">Sign In</button>
+                <button id="logout-btn" class="hidden">Sign Out</button>
+            </div>
+        </header>
+        
+        <div id="landing-page">
+            <h2>Organize your tasks effortlessly</h2>
+            <p>SimpleTodo helps you keep track of what matters most.</p>
+            <button id="get-started-btn">Get Started - It's Free</button>
+        </div>
+
+        <div id="todo-app" class="hidden">
+            <div class="input-container">
+                <input type="text" id="task-input" placeholder="Add a new task...">
+                <button id="add-task-btn">Add</button>
+            </div>
+            <div class="task-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+            <ul id="task-list"></ul>
+            
+            <div class="premium-banner">
+                <div class="premium-content">
+                    <h3><i class="fas fa-star"></i> Upgrade to Pro</h3>
+                    <p>Get access to recurring tasks, priorities, and more!</p>
+                </div>
+                <button id="upgrade-btn">Coming Soon</button>
+            </div>
+        </div>
+        
+        <div id="feedback-container" class="hidden">
+            <button id="feedback-toggle">Feedback</button>
+            <div id="feedback-form" class="hidden">
+                <h3>Help us improve</h3>
+                <p>We'd love to hear your thoughts on SimpleTodo!</p>
+                <textarea id="feedback-text" placeholder="Your feedback..."></textarea>
+                <button id="submit-feedback">Send Feedback</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Firebase SDK -->
+    <script type="module" src="app.js"></script>
+</body>
+</html>
